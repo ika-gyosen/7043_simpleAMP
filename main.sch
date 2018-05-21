@@ -9412,8 +9412,8 @@ Beckman Helitrim 25</description>
 <parts>
 <part name="IC1" library="OPAMP" deviceset="*4558" device="N"/>
 <part name="C1" library="Capasitor" deviceset="C-EU" device="050-024X044" value="0.1u"/>
-<part name="R10" library="Resistor" deviceset="RESISTOR" device="0207/12" value="15K"/>
-<part name="R11" library="Resistor" deviceset="RESISTOR" device="0207/12" value="15K"/>
+<part name="R10" library="Resistor" deviceset="RESISTOR" device="0207/12" value="100R"/>
+<part name="R11" library="Resistor" deviceset="RESISTOR" device="0207/12" value="100R"/>
 <part name="C15" library="Capasitor" deviceset="CPOL-EU" device="TAP5-45" value="100u6.3"/>
 <part name="C16" library="Capasitor" deviceset="CPOL-EU" device="TAP5-45" value="100u6.3"/>
 <part name="R12" library="Resistor" deviceset="RESISTOR" device="0207/12" value="100K"/>
@@ -9432,8 +9432,8 @@ Beckman Helitrim 25</description>
 <part name="SUPPLY3" library="supply2" deviceset="VCC" device=""/>
 <part name="X2" library="con-phoenix-254" deviceset="MPT3" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
-<part name="R1" library="Resistor" deviceset="RESISTOR" device="0207/12" value="33K"/>
-<part name="R2" library="Resistor" deviceset="RESISTOR" device="0207/12" value="33K"/>
+<part name="R1" library="Resistor" deviceset="RESISTOR" device="0207/12" value="100R"/>
+<part name="R2" library="Resistor" deviceset="RESISTOR" device="0207/12" value="100R"/>
 <part name="VR1" library="Kit" deviceset="KIT-TRIMPOT" device="POT_ST"/>
 </parts>
 <sheets>
@@ -9461,8 +9461,8 @@ Beckman Helitrim 25</description>
 <instance part="J1" gate="G$1" x="40.64" y="111.76"/>
 <instance part="X1" gate="G$1" x="127" y="48.26"/>
 <instance part="SUPPLY1" gate="GND" x="111.76" y="55.88"/>
-<instance part="SUPPLY2" gate="GND" x="58.42" y="111.76"/>
-<instance part="SUPPLY3" gate="G$1" x="53.34" y="101.6"/>
+<instance part="SUPPLY2" gate="GND" x="53.34" y="106.68"/>
+<instance part="SUPPLY3" gate="G$1" x="53.34" y="116.84"/>
 <instance part="X2" gate="-1" x="2.54" y="58.42" rot="R180"/>
 <instance part="X2" gate="-2" x="2.54" y="48.26" rot="R180"/>
 <instance part="X2" gate="-3" x="2.54" y="40.64" rot="R180"/>
@@ -9493,11 +9493,6 @@ Beckman Helitrim 25</description>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<pinref part="SUPPLY2" gate="GND" pin="GND"/>
-<wire x1="48.26" y1="114.3" x2="58.42" y2="114.3" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="X2" gate="-3" pin="1"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <wire x1="5.08" y1="40.64" x2="10.16" y2="40.64" width="0.1524" layer="91"/>
@@ -9513,6 +9508,11 @@ Beckman Helitrim 25</description>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="45.72" y1="38.1" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<pinref part="SUPPLY2" gate="GND" pin="GND"/>
+<wire x1="48.26" y1="109.22" x2="53.34" y2="109.22" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -9525,15 +9525,14 @@ Beckman Helitrim 25</description>
 <junction x="68.58" y="68.58"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="48.26" y1="109.22" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
-</segment>
-<segment>
 <pinref part="SUPPLY6" gate="G$1" pin="VCC"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="45.72" y1="76.2" x2="45.72" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
+<wire x1="48.26" y1="114.3" x2="53.34" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$23" class="0">

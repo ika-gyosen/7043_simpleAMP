@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2.54" unitdist="mm" unit="mm" style="dots" multiple="1" display="yes" altdistance="1.27" altunitdist="mm" altunit="mm"/>
+<grid distance="2.54" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="1.27" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -119,10 +119,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="62.38" y2="0" width="0" layer="20"/>
+<wire x1="-1.27" y1="0" x2="62.38" y2="0" width="0" layer="20"/>
 <wire x1="62.38" y1="0" x2="62.38" y2="27.46" width="0" layer="20"/>
-<wire x1="62.38" y1="27.46" x2="0" y2="27.46" width="0" layer="20"/>
-<wire x1="0" y1="27.46" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="62.38" y1="27.46" x2="-1.27" y2="27.46" width="0" layer="20"/>
+<wire x1="-1.27" y1="27.46" x2="-1.27" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="Capasitor">
@@ -538,12 +538,12 @@ design rules under a new name.</description>
 <element name="C17" library="Capasitor" package="C050-024X044" value="1u" x="17.78" y="15.24" rot="R270"/>
 <element name="IC1" library="OPAMP" package="DIP08" value="4558N" x="26.67" y="16.51" rot="R90"/>
 <element name="J1" library="jack" package="DCJ0202" value="DCJ0202" x="55.88" y="17.78" rot="R180"/>
-<element name="R1" library="Resistor" package="0207(1/4W)" value="33K" x="11.43" y="5.08"/>
-<element name="R10" library="Resistor" package="0207(1/4W)" value="15K" x="41.91" y="7.62" rot="R180"/>
-<element name="R11" library="Resistor" package="0207(1/4W)" value="15K" x="41.91" y="12.7" rot="R180"/>
+<element name="R1" library="Resistor" package="0207(1/4W)" value="100R" x="11.43" y="5.08"/>
+<element name="R10" library="Resistor" package="0207(1/4W)" value="100R" x="41.91" y="7.62" rot="R180"/>
+<element name="R11" library="Resistor" package="0207(1/4W)" value="100R" x="41.91" y="12.7" rot="R180"/>
 <element name="R12" library="Resistor" package="0207(1/4W)" value="100K" x="13.97" y="22.86" rot="R180"/>
 <element name="R13" library="Resistor" package="0207(1/4W)" value="100K" x="13.97" y="25.4" rot="R180"/>
-<element name="R2" library="Resistor" package="0207(1/4W)" value="33K" x="11.43" y="10.16"/>
+<element name="R2" library="Resistor" package="0207(1/4W)" value="100R" x="11.43" y="10.16"/>
 <element name="X1" library="jack" package="MJ-8435" value="JACK3.5MM" x="62.23" y="7.62" rot="R270"/>
 <element name="X2" library="con-phoenix-254" package="3POL254" value="" x="2.54" y="15.24" rot="R90">
 <attribute name="MF" value="" x="2.54" y="15.24" size="1.778" layer="27" rot="R90" display="off"/>
@@ -558,7 +558,6 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="4"/>
 <contactref element="C1" pad="1"/>
 <contactref element="X1" pad="2@1"/>
-<contactref element="J1" pad="1"/>
 <contactref element="X2" pad="3"/>
 <wire x1="2.54" y1="22.86" x2="2.54" y2="17.78" width="0.8128" layer="1"/>
 <wire x1="40.64" y1="15.24" x2="40.64" y2="17.78" width="0.8128" layer="1"/>
@@ -568,36 +567,37 @@ design rules under a new name.</description>
 <wire x1="30.48" y1="15.24" x2="30.48" y2="12.7" width="0.8128" layer="1"/>
 <wire x1="12.7" y1="2.54" x2="30.48" y2="2.54" width="0.8128" layer="1"/>
 <wire x1="30.48" y1="2.54" x2="30.48" y2="12.7" width="0.8128" layer="1"/>
-<wire x1="55.88" y1="15.24" x2="55.88" y2="14.68" width="0.8128" layer="1"/>
 <wire x1="40.64" y1="15.24" x2="49.4196" y2="15.24" width="0.8128" layer="1"/>
 <wire x1="49.4196" y1="15.24" x2="49.4196" y2="15.018" width="0.8128" layer="1"/>
 <wire x1="49.4196" y1="15.018" x2="52.7404" y2="15.018" width="0.8128" layer="1"/>
 <wire x1="52.7404" y1="15.018" x2="52.7404" y2="15.24" width="0.8128" layer="1"/>
 <wire x1="52.7404" y1="15.24" x2="55.88" y2="15.24" width="0.8128" layer="1"/>
 <wire x1="56.73" y1="10.32" x2="55.88" y2="10.32" width="0.8128" layer="1"/>
-<wire x1="55.88" y1="10.32" x2="55.88" y2="14.68" width="0.8128" layer="1"/>
 <contactref element="VR1" pad="E"/>
 <contactref element="R12" pad="2"/>
 <wire x1="12.7" y1="12.7" x2="7.62" y2="12.7" width="0.7" layer="1"/>
 <wire x1="7.62" y1="12.7" x2="7.62" y2="22.86" width="0.7" layer="1"/>
 <wire x1="7.62" y1="22.86" x2="2.54" y2="22.86" width="0.7" layer="1"/>
 <wire x1="12.7" y1="12.7" x2="12.7" y2="2.54" width="0.7" layer="1"/>
+<contactref element="J1" pad="3"/>
+<wire x1="55.88" y1="15.24" x2="55.88" y2="20.78" width="0" layer="19" extent="1-1"/>
+<wire x1="55.88" y1="10.32" x2="55.88" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
 <contactref element="IC1" pad="8"/>
 <contactref element="C1" pad="2"/>
-<contactref element="J1" pad="3"/>
 <wire x1="22.86" y1="25.4" x2="22.86" y2="20.32" width="0.8128" layer="1"/>
 <wire x1="22.86" y1="25.4" x2="40.64" y2="25.4" width="0.8128" layer="1"/>
 <wire x1="40.64" y1="25.4" x2="40.64" y2="20.32" width="0.8128" layer="1"/>
-<wire x1="55.88" y1="20.32" x2="55.88" y2="20.78" width="0.8128" layer="1"/>
 <wire x1="40.64" y1="20.32" x2="49.4196" y2="20.32" width="0.8128" layer="1"/>
 <wire x1="49.4196" y1="20.32" x2="49.4196" y2="20.542" width="0.8128" layer="1"/>
 <wire x1="49.4196" y1="20.542" x2="52.7404" y2="20.542" width="0.8128" layer="1"/>
 <wire x1="52.7404" y1="20.542" x2="52.7404" y2="20.32" width="0.8128" layer="1"/>
 <wire x1="52.7404" y1="20.32" x2="55.88" y2="20.32" width="0.8128" layer="1"/>
 <contactref element="R13" pad="1"/>
-<wire x1="22.86" y1="25.4" x2="20.32" y2="25.4" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="25.4" x2="22.86" y2="25.4" width="0.7" layer="1"/>
+<contactref element="J1" pad="1"/>
+<wire x1="55.88" y1="20.32" x2="55.88" y2="14.68" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$23">
 <contactref element="IC1" pad="5"/>
